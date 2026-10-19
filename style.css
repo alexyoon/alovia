@@ -233,3 +233,24 @@ td:first-child{font-weight:700;color:var(--ink);background:var(--teal-l)}
 .img.tr-img{aspect-ratio:4/3;border-radius:10px;box-shadow:none}
 @media(max-width:860px){.tr-left{min-height:720px}.tr-l-txt{max-width:100%;padding:10px 24px 0}.tr-sub br{display:none}.img.tr-bottle{width:46%;height:42%;bottom:56px}.tr-right{padding:28px 20px}}
 @media(max-width:520px){.tr-block,.tr-block.rev{grid-template-columns:1fr}.tr-block.rev .img{order:2}.tr-l-txt{max-width:100%}.img.tr-bottle{width:52%;height:34%;right:4%}.tr-left{min-height:780px}}
+
+/* ===== 검토 후 수정 ===== */
+/* 잘려 보이던 배경 글자 숨김 */
+.toc-word,.sp-mark{display:none}
+/* 가맹 상담 폼 */
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+form input,form select,form textarea{width:100%;font:inherit;font-size:15px;padding:13px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);outline:none;transition:.2s}
+form input:focus,form select:focus,form textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,107,92,.12)}
+form select,form textarea,form button{grid-column:1/-1}
+form textarea{resize:vertical;min-height:120px}
+form button{font:inherit;font-weight:700;font-size:16px;padding:15px;border:0;border-radius:40px;background:var(--teal);color:#fff;cursor:pointer;transition:.2s}
+form button:hover{background:var(--teal-d)}
+/* 모바일 메뉴: 한 줄 가로 스크롤 */
+@media(max-width:760px){
+ .nav{flex-direction:row;align-items:center;gap:10px;padding:10px 12px}
+ .logo{font-size:18px;flex:none}.logo small{display:none}
+ nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ nav::-webkit-scrollbar{display:none}
+ nav a{white-space:nowrap;padding:6px 10px;font-size:13px}
+ form{grid-template-columns:1fr}
+}
