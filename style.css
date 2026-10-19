@@ -1,0 +1,74 @@
+/* ALOVIA 알로비아 — 공용 스타일 (emerald teal · soft white · gold) */
+:root{--teal:#0f6b5c;--teal-d:#0a4a40;--teal-l:#e6f3ef;--gold:#c9a45c;--ink:#1d2a27;--mut:#5f6f6b;--bg:#fbfdfc;--line:#dde9e5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:80px 20px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,253,252,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{max-width:1140px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:800;font-size:22px;letter-spacing:.12em;color:var(--teal)}
+.logo small{display:inline-block;margin-left:8px;font-size:12px;letter-spacing:.05em;color:var(--gold);font-weight:600}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 14px;border-radius:30px;font-size:14.5px;color:var(--mut);transition:.2s}
+nav a:hover{color:var(--teal);background:var(--teal-l)}
+nav a.on{color:#fff;background:var(--teal)}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--teal-l) 0%,#fff 55%,#f7f1e4 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding-top:90px;padding-bottom:90px}
+.eyebrow,.sec-t{font-size:13px;font-weight:700;letter-spacing:.22em;color:var(--gold);margin-bottom:14px}
+h1{font-size:clamp(34px,5vw,56px);line-height:1.25;font-weight:800;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--teal)}
+h2{font-size:clamp(26px,3.4vw,38px);line-height:1.35;font-weight:800;margin-bottom:14px}
+h3{font-size:18px;font-weight:700;margin:14px 0 6px}
+p{color:var(--mut)}
+.hero p{font-size:17px;margin-bottom:30px;max-width:520px}
+.lead{font-size:17px;margin-bottom:36px;max-width:680px}
+.btn{display:inline-block;padding:14px 28px;border-radius:40px;background:var(--teal);color:#fff;font-weight:700;margin:0 10px 10px 0;transition:.2s;border:2px solid var(--teal)}
+.btn:hover{background:var(--teal-d);border-color:var(--teal-d)}
+.btn.o{background:transparent;color:var(--teal)}
+.btn.o:hover{background:var(--teal-l)}
+/* image slots */
+.img{position:relative;aspect-ratio:4/3;border-radius:22px;background:linear-gradient(145deg,#d7ece6,#eef6f3 60%,#f3ead6);background-size:cover;background-position:center;overflow:hidden;box-shadow:0 18px 40px -22px rgba(15,107,92,.45)}
+.img:not(.has)::after{content:"ALOE";position:absolute;inset:0;display:grid;place-items:center;font-weight:800;letter-spacing:.4em;color:rgba(15,107,92,.25);font-size:20px}
+.hero .img{aspect-ratio:4/5}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 22px;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:var(--teal);box-shadow:0 16px 30px -18px rgba(15,107,92,.5)}
+.card b{color:var(--gold);font-size:14px;letter-spacing:.1em}
+.card p{font-size:14.5px}
+/* sections */
+.band{background:var(--teal-l)}
+.dark{background:var(--teal-d);color:#fff}
+.dark p,.dark .lead{color:rgba(255,255,255,.78)}
+.dark .stat{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)}
+.dark .stat span{color:rgba(255,255,255,.8)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.item .img{aspect-ratio:1/1}
+.item p{font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 18px}
+.stat b{display:block;font-size:28px;font-weight:800;color:var(--teal);line-height:1.2}
+.dark .stat b{color:var(--gold)}
+.stat span{font-size:14px;color:var(--mut)}
+.hl{color:var(--teal);font-weight:700}
+.dark .hl{color:var(--gold)}
+.note{font-size:13px;color:var(--mut);margin-top:18px}
+/* bars */
+.bars{display:flex;flex-direction:column;gap:14px;margin-top:26px;max-width:760px}
+.bar{display:flex;align-items:center;gap:14px;font-weight:700;color:var(--mut)}
+.bar i{display:block;height:16px;border-radius:10px;background:linear-gradient(90deg,var(--teal),var(--gold))}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:10px}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 18px;position:relative}
+.step b{display:block;font-size:13px;letter-spacing:.15em;color:var(--gold);margin-bottom:6px}
+.dark .step{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15);color:#fff}
+/* footer */
+footer{background:#0b2f29;color:rgba(255,255,255,.7);text-align:center;font-size:13px;padding:34px 20px}
+/* responsive */
+@media(max-width:960px){.cards{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.wrap{padding:56px 16px}.hero .wrap,.two{grid-template-columns:1fr;gap:32px}.grid3,.stats{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.nav{flex-direction:column;align-items:flex-start;gap:8px}nav a{padding:6px 10px;font-size:13.5px}}
